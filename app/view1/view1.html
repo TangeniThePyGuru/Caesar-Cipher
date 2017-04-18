@@ -1,9 +1,16 @@
 <div ng-controller="View1Ctrl">
 
     <!--<label for="plaintext"></label>-->
-    <h3 class="h3" align="center"> <em> Caesar Cipher  </em> </h3>
+    <h3 class="h3" align="center"> <em> Caesar Cipher Encryption  </em> </h3>
+
+
     <div class="form-group">
         <input type="text" class="form-control" id="plaintext" ng-model="plainText" ng-change="clear()" placeholder="Enter Your Plain Text">
+    </div>
+
+
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="key" ng-change="clear()" placeholder="Enter Key">
     </div>
 
     <div class="input-group">
@@ -12,8 +19,32 @@
     </div>
     <br>
     <div class="form-group">
-        <button class="btn btn-primary" ng-click="caesarShift(plainText, 2)">Encrypt</button>
+        <button class="btn btn-primary" ng-click="caesarShift(plainText, key)">Encrypt</button>
     </div>
+
+<!-----------------------------Decryption-------------------------------------------------------------->
+
+    <h3 class="h3" align="center"> <em> Caesar Cipher Decryption  </em> </h3>
+
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="cipherText" ng-model="cipherText" ng-change="clearCipher()" placeholder="Enter Your Cipher Text">
+    </div>
+
+
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="decryptKey" ng-change="clearCipher()" placeholder="Enter Key">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">Plain Text: </span>
+        <label class="form-control"> {{ cipherOutput }} </label>
+    </div>
+    <br>
+    <div class="form-group">
+        <button class="btn btn-danger" ng-click="caesarShiftDecrypt(cipherText, decryptKey)">Decrypt</button>
+    </div>
+
 </div>
 
 
