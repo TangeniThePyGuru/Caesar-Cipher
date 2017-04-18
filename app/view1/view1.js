@@ -91,16 +91,21 @@ angular.module('myApp.view1', ['ngRoute'])
 
         // Get its code
         var code = str.charCodeAt(i);
+          console.log(code);
 
         // Uppercase letters
-        if ((code >= 65) && (code <= 90))
+        if ((code >= 65) && (code <= 90)) {
+          var d = 65;
+          console.log(code+ '  '+ amount + " " + d);
+          var debug = code - d + amount;
+          console.log(debug);
           c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
-
-        // Lowercase letters
-        else if ((code >= 97) && (code <= 122))
+          // Lowercase letters
+        }else if ((code >= 97) && (code <= 122))
           c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
 
       }
+
 
       // Append
       $scope.output += c;
