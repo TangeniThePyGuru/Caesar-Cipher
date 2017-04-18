@@ -1,41 +1,3 @@
-# `angular-seed` — the seed for AngularJS apps
-
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
-
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
-
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
-
-## Getting Started
-
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
-
-### Prerequisites
-
-You need git to clone the `angular-seed` repository. You can get git from [here][git].
-
-We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
-and its package manager (npm) installed. You can get them from [here][node].
-
-### Clone `angular-seed`
-
-Clone the `angular-seed` repository using git:
-
-```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
-```
-
-If you just want to start a new project without the `angular-seed` commit history then you can do:
-
-```
-git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
@@ -74,37 +36,6 @@ npm start
 ```
 
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
-
-
-## Directory Layout
-
-```
-app/                    --> all of the source files for the application
-  app.css               --> default stylesheet
-  components/           --> all app specific modules
-    version/              --> version related components
-      version.js                 --> version module declaration and basic "version" value service
-      version_test.js            --> "version" value service tests
-      version-directive.js       --> custom directive that returns the current app version
-      version-directive_test.js  --> version directive tests
-      interpolate-filter.js      --> custom interpolation filter
-      interpolate-filter_test.js --> interpolate filter tests
-  view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
-    view1.js              --> the controller logic
-    view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
-  app.js                --> main application module
-  index.html            --> app layout file (the main html template file of the app)
-  index-async.html      --> just like index.html, but loads js files asynchronously
-karma.conf.js         --> config file for running unit tests with Karma
-e2e-tests/            --> end-to-end tests
-  protractor-conf.js    --> Protractor config file
-  scenarios.js          --> end-to-end scenarios to be run by Protractor
-```
 
 
 ## Testing
@@ -275,21 +206,6 @@ You will need to enable the integration between Travis and GitHub. See the
 
 ## Contact
 
-For more information on AngularJS please check out [angularjs.org][angularjs].
+For more information on this caesar cipher algorithm please contact me @ tangenishikomba@gmail.com
 
 
-[angularjs]: https://angularjs.org/
-[bower]: http://bower.io/
-[git]: https://git-scm.com/
-[http-server]: https://github.com/indexzero/http-server
-[jasmine]: https://jasmine.github.io/
-[jdk]: https://wikipedia.org/wiki/Java_Development_Kit
-[jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
-[karma]: https://karma-runner.github.io/
-[local-app-url]: http://localhost:8000/index.html
-[node]: https://nodejs.org/
-[npm]: https://www.npmjs.org/
-[protractor]: http://www.protractortest.org/
-[selenium]: http://docs.seleniumhq.org/
-[travis]: https://travis-ci.org/
-[travis-docs]: https://docs.travis-ci.com/user/getting-started
