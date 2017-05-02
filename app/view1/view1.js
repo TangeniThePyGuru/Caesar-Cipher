@@ -94,15 +94,22 @@ angular.module('myApp.view1', ['ngRoute'])
 
         // Get its code
         var code = str.charCodeAt(i);
-
         // Uppercase letters
-        if ((code >= 65) && (code <= 90))
+        if ((code >= 65) && (code <= 90)) {
+
+          if(((code - 65 - parseInt(amount)) % 26 )< 0) {
+            c = String.fromCharCode((((code - 65 - parseInt(amount)) % 26) + 26) + 65);
+          }
+          else
           c = String.fromCharCode(((code - 65 - parseInt(amount)) % 26) + 65);
-
+        }
         // Lowercase letters
-        else if ((code >= 97) && (code <= 122))
-          c = String.fromCharCode(((code - 97 - parseInt(amount)) % 26) + 97);
-
+        else if ((code >= 97) && (code <= 122)) {
+          if(((code - 97 - parseInt(amount)) % 26) < 0)
+            c = String.fromCharCode((((code - 97 - parseInt(amount)) % 26) + 26) + 97);
+          else
+            c = String.fromCharCode(((code - 97 - parseInt(amount)) % 26) + 97);
+        }
       }
       // Append
       $scope.cipherOutput += c;
