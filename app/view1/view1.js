@@ -11,15 +11,25 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function($scope) {
 
+  /*
+
+    Global variables declaration
+
+   */
+
   // Make a plaintext variable
   $scope.plainText = '';
 
   // Make an output/ cipher text variable
   $scope.output = '';
-  
+
   $scope.key = '';
 
-  // encryption function
+  /*
+
+    encryption function
+
+   */
   $scope.caesarShift = function(str, amount) {
 
 
@@ -69,12 +79,22 @@ angular.module('myApp.view1', ['ngRoute'])
     return $scope.output;
   };
 
+
+ /*
+   global vriables declaration
+  */
+
   $scope.cipherText = '';
 
   $scope.cipherOutput = '';
   
   $scope.decryptKey = '';
-  // decryption function
+
+  /*
+
+   The decryption function
+
+   */
   $scope.caesarShiftDecrypt = function(str, amount) {
 
 
